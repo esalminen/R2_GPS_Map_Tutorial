@@ -114,7 +114,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Make initial location update just once to get latest known position to screen
-         updateLocation()
+        updateLocation()
     } // end of onCreate()
 
     // Function to turn off continuous location tracking
@@ -167,7 +167,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Function to update UI values
-    private fun updateUIValues(location: Location){
+    private fun updateUIValues(location: Location?){
+        location ?: return
         locationForMap = location
         binding.tvLatValue.text = location.latitude.toString()
         binding.tvLonValue.text = location.longitude.toString()
