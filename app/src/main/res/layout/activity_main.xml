@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvLat"
+        android:layout_width="@dimen/ValueNameMaxWidth"
+        android:layout_height="wrap_content"
+        android:text="Latitude:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLatValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="0.00"
+        app:layout_constraintStart_toEndOf="@+id/tvLat"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLon"
+        android:layout_width="@dimen/ValueNameMaxWidth"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Longitude:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLat" />
+
+    <TextView
+        android:id="@+id/tvLonValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="0.00"
+        app:layout_constraintStart_toEndOf="@+id/tvLon"
+        app:layout_constraintTop_toBottomOf="@+id/tvLatValue" />
+
+    <TextView
+        android:id="@+id/tvAlt"
+        android:layout_width="@dimen/ValueNameMaxWidth"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Altitude [m]:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLon" />
+
+    <TextView
+        android:id="@+id/tvAltValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="0.00"
+        app:layout_constraintStart_toEndOf="@+id/tvAlt"
+        app:layout_constraintTop_toBottomOf="@+id/tvLonValue" />
+
+    <TextView
+        android:id="@+id/tvAccuracy"
+        android:layout_width="@dimen/ValueNameMaxWidth"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Accuracy [m]:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAlt" />
+
+    <TextView
+        android:id="@+id/tvAccuracyValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="0.00"
+        app:layout_constraintStart_toEndOf="@+id/tvAccuracy"
+        app:layout_constraintTop_toBottomOf="@+id/tvAltValue" />
+
+    <TextView
+        android:id="@+id/tvSpeed"
+        android:layout_width="@dimen/ValueNameMaxWidth"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Speed [m/s]:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAccuracyValue" />
+
+    <TextView
+        android:id="@+id/tvSpeedValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="0.00"
+        app:layout_constraintStart_toEndOf="@+id/tvSpeed"
+        app:layout_constraintTop_toBottomOf="@+id/tvAccuracyValue" />
+
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="@dimen/ValueNameMaxWidth"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSpeed" />
+
+    <TextView
+        android:id="@+id/tvAddressValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Not available"
+        app:layout_constraintStart_toEndOf="@+id/tvAddress"
+        app:layout_constraintTop_toBottomOf="@+id/tvSpeedValue" />
+
+    <Switch
+        android:id="@+id/swLocUpdates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:minHeight="48dp"
+        android:text="Location Updates"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAddress"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:id="@+id/tvLocUpdates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Location updates off"
+        app:layout_constraintBottom_toBottomOf="@+id/swLocUpdates"
+        app:layout_constraintStart_toEndOf="@+id/swLocUpdates"
+        app:layout_constraintTop_toTopOf="@+id/swLocUpdates" />
+
+    <Switch
+        android:id="@+id/swGpsSavePower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:minHeight="48dp"
+        android:text="Save Power / GPS"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/swLocUpdates"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:id="@+id/twGpsSavePower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Using Towers + WiFi"
+        app:layout_constraintBottom_toBottomOf="@+id/swGpsSavePower"
+        app:layout_constraintStart_toEndOf="@+id/swGpsSavePower"
+        app:layout_constraintTop_toTopOf="@+id/swGpsSavePower" />
+
+    <TextView
+        android:id="@+id/tvGpsSaveNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location update must be off to switch GPS / Tower + Wifi"
+        app:layout_constraintTop_toBottomOf="@+id/swGpsSavePower"
+        app:layout_constraintStart_toStartOf="@+id/swGpsSavePower"
+         />
+
+    <Button
+        android:id="@+id/btnShowMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Show Map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGpsSaveNote" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
