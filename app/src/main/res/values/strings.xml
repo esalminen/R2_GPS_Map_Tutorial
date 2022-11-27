@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">R2_GPS_Map_Tutorial</string>
     <string name="title_activity_maps">MapsActivity</string>
-    <string name="google_maps_key" translatable="false">AIzaSyASLg0e1U3pBfIcdB5Bqhycv2i4YEopKbU</string>
     <string name="title_activity_maps2">MapsActivity2</string>
 </resources>
